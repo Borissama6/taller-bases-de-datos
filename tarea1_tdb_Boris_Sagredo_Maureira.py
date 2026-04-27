@@ -214,8 +214,14 @@ def ejecutar_simulacion():
     registro_general = registro() 
 
     # 2. Creación de Deportistas
-    f1 = Futbolista("Alexis Sanchez", 35, "Tocopilla FC", "Delantero")
+    f1 = Futbolista("Alexis Sanchez", 35, "Sevilla", "Extremo")
     f2 = Futbolista("Arturo Vidal", 36, "Colo-Colo", "Mediocampista")
+    f3 = Futbolista("Charles Aranguiz", 35, "Universidad de Chile", "Mediocampista")
+    f4 = Futbolista("Eduardo Vargas", 34, "Universidad de Chile", "Delantero centro")
+    f5 = Futbolista("Marcelo Diaz", 37, "Universidad de Chile", "Mediocampista")
+    f6 = Futbolista("Fabian Hormazabal", 31, "Universidad de Chile", "Lateral derecho")
+    f7 = Futbolista("Lucas Assadi", 23, "Universidad de Chile", "Extremo")
+    f8 = Futbolista("Matias Fernandez", 23, "Fiorentina", "Mediocampitas")
     t1 = Tenista("Nicolas Jarry", 28, "Sin Pareja", 20)
     t2 = Tenista("Alejandro Tabilo", 26, "Tomas Barrios", 38)
     a1 = Alteta("Martina Weil", 24, "400m planos")
@@ -223,6 +229,12 @@ def ejecutar_simulacion():
     # Registro de deportistas
     registro_general.añadir_deportista(f1)
     registro_general.añadir_deportista(f2)
+    registro_general.añadir_deportista(f3)
+    registro_general.añadir_deportista(f4)
+    registro_general.añadir_deportista(f5)
+    registro_general.añadir_deportista(f6)
+    registro_general.añadir_deportista(f7)
+    registro_general.añadir_deportista(f8)
     registro_general.añadir_deportista(t1)
     registro_general.añadir_deportista(t2)
     registro_general.añadir_deportista(a1)
@@ -230,7 +242,21 @@ def ejecutar_simulacion():
 
     # Métodos específicos de cada deporte
     f1.añadir_goles(10)
-    f1.añadir_asistencias(5)
+    f2.añadir_asistencias(12)
+    f3.añadir_asistencias(7)
+    f4.añadir_asistencias(11)
+    f5.añadir_asistencias(3)
+    f6.añadir_asistencias(20)
+    f7.añadir_goles(10)
+    f8.añadir_goles(12)
+    f1.añadir_goles(3)
+    f2.añadir_goles(2)
+    f3.añadir_goles(5)
+    f4.añadir_goles(13)
+    f5.añadir_goles(2)
+    f6.añadir_goles(33)
+    f7.añadir_goles(20)
+    f8.añadir_goles(0)
     t1.actualizar_ranking(19)
     a1.agregar_mejores_tiempos(51.07)
     a1.agregar_mejores_tiempos(51.12)
@@ -253,7 +279,6 @@ def ejecutar_simulacion():
     print(f'Todos los deportistas: {registro_general.mostrar_deportistas()}')
     
 
-    print("\nRanking de Fútbol")
     registro_general.mostrar_ranking_por_deporte("Futbol")
 
     print(f'Mejor futbolista: {registro_general.mostrar_n_mejores_deportistas("Futbol", 1)}')
